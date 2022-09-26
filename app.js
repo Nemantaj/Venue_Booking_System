@@ -23,8 +23,11 @@ app.use(userRoutes);
 app.use(bookRoutes);
 
 app.use((error, req, res, next) => {
-  console.log(error);
-  res.redirect("/500");
+   const status = error.statusCode; 
+   res.status(status).json({ 
+     title: error.title, 
+     msg: error.message, 
+   });
 });
 
 mongoose
