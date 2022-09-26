@@ -11,6 +11,7 @@ const reserveSchema = new Schema(
     venueId: {
       type: mongoose.Types.ObjectId,
       required: true,
+      ref: "Venues"
     },
   },
   { timestamps: true }
