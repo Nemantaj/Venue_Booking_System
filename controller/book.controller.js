@@ -202,6 +202,8 @@ exports.getRecipts = (req, res, next) => {
   }
 
   Reserve.find({ userId: userId })
+    .populate("venueId", ["showName", "_id"])
+    .sort({_id: -1})
     .then((result) => {
       res.status(200).json({ result });
     })
