@@ -6,7 +6,7 @@ const cors = require("cors");
 const bookRoutes = require("./routes/book");
 const userRoutes = require("./routes/user");
 
-const MONGODB_URI = "mongodb://localhost:27017/booking";
+const MONGODB_URI = "Enter your mongoDb collection url";
 const corsOptions = {
   origin: "*",
   credentials: true,
